@@ -1,0 +1,169 @@
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --gray-blue: hsl(218, 22%, 67%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Karla;
+}
+
+body {
+  background-color: var(--light-gray);
+}
+
+/* Card Body */
+
+.card {
+  width: 635px;
+  height: 450px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px hsl(204, 43%, 83%);
+}
+
+/* Top Box */
+
+.description {
+  background-color: white;
+  grid-column: span 2;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.description-text {
+  width: 86%;
+}
+
+.description h1 {
+  color: var(--cyan);
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#yellow-text {
+  color: var(--yellow);
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.description p {
+  color: var(--gray-blue);
+  font-size: 16px;
+  line-height: 28px;
+}
+
+/* Bottom Left Box */
+
+.subscription {
+  background-color: var(--cyan);
+  color: white;
+  border-bottom-left-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscription-text {
+  width: 75%;
+  height: 75%;
+  font-size: 16px;
+}
+
+h2 /*subscription and why-us*/ {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.center-align {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 30px;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.light-text {
+  color: hsl(0, 0%, 100%, 0.5);
+}
+
+.button {
+  height: 40px;
+  width: 100%;
+  background-color: var(--yellow);
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 28px;
+  box-shadow: 0px 5px 20px hsl(179, 62%, 35%);
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: hsl(71, 73%, 60%)
+}
+
+
+/* Bottom Right Box */
+
+.why-us {
+  background-color: hsl(179, 62%, 43%, 0.8);
+  color: white;
+  border-bottom-right-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.why-us-text{
+  height: 75%;
+  width: 75%;
+}
+
+.why-us p {
+  font-size: 16px;
+  font-weight: 400;
+  color: hsl(0, 0%, 100%, 0.7);
+}
+
+/* Attribution */
+
+.attribution {
+  font-size: 11px;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width:700px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 391px;
+  }
+}
